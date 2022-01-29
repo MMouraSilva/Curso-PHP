@@ -19,7 +19,7 @@
 
     // Precedência de operadores:
     // {} => ** => / * % => + -
-    echo '<p>Procedência</p>';
+    echo '<p>Precedência</p>';
     echo 2 + 3 * 4, '<br>';
     echo (2 + 3) * 4, '<br>';
     echo 2 + 3 * 4 ** 2, '<br>';
