@@ -98,6 +98,11 @@
                                 Variáveis
                             </a>
                         </li>
+                        <li>
+                            <a href="exercicio.php?dir=variaveis&file=desafio_equacao">
+                                Desafio Equação
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 </nav>
