@@ -148,6 +148,11 @@
                                 IF ELSE
                             </a>
                         </li>
+                        <li>
+                            <a href="exercicio.php?dir=controle&file=operadores_relacionais">
+                                Op. Relacionais
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 </nav>
