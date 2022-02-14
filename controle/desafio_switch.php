@@ -7,6 +7,8 @@
         <option value="milha-km">Milha > KM</option>
         <option value="metros-km">Metros > Km</option>
         <option value="km-metros">Km > Metros</option>
+        <option value="celsius-fahrenheit">Celsius > Fahrenheit</option>
+        <option value="fahrenheit-celsius">Fahrenheit > Celsius</option>
     </select>
     <button>Calcular</button>
 </form>
@@ -20,6 +22,8 @@
 <?php
 const FATOR_KM_MILHA = 0.62137;
 const FATOR_METRO_KM = 1000;
+const FORMULA_FAHRENHEIT_ARGUMENTO_1 = 9 / 5;
+const FORMULA_FAHRENHEIT_ARGUMENTO_2 = 32;
 
 $tipoConversao = $_POST['conversao'];
 $param = $_POST['param'] ?? 0;
@@ -44,6 +48,17 @@ switch ($tipoConversao) {
         $paramConvertido = $param * FATOR_METRO_KM;
         $mensagem = "$param Km = $paramConvertido Metro(s)";
         break;
+
+    case 'celsius-fahrenheit':
+        $paramConvertido = ($param * FORMULA_FAHRENHEIT_ARGUMENTO_1) + FORMULA_FAHRENHEIT_ARGUMENTO_2;
+        $mensagem = "$param °C = $paramConvertido °F";
+        break;
+
+    case 'fahrenheit-celsius':
+        $paramConvertido = ($param - FORMULA_FAHRENHEIT_ARGUMENTO_2) / FORMULA_FAHRENHEIT_ARGUMENTO_1;
+        $mensagem = "$param °F = $paramConvertido °C";
+        break;
+
     default:
         $mensagem = "Nenhum valor calculado!";
 }
